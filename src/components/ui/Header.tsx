@@ -21,8 +21,8 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full min-h-[50px] sm:min-h-[65px] max-h-[50px] sm:max-h-[65px] bg-white shadow-md z-50 flex items-center">
-      <div className="w-full max-w-screen-xl mx-auto flex flex-row items-center justify-between px-3 sm:px-4 md:px-12">
+    <header className="fixed w-[390px] min-h-[50px] sm:min-h-[65px] max-h-[50px] sm:max-h-[65px] bg-white shadow-md z-50 flex items-center">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-row items-center justify-between px-2">
         <Link to="/" className="cursor-pointer">
           <img
             className="min-h-[30px] sm:min-h-[40px] max-h-[30px] sm:max-h-[40px] min-w-[109px] sm:min-w-[145px] max-w-[109px] sm:max-w-[145px] object-contain"

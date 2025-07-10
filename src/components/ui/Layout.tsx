@@ -7,7 +7,7 @@ export const Layout = () => {
   const [selectedState, setSelectedState] = useState<string>("Karnataka");
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[390px] w-full mx-auto">
       <Header
         selectedState={selectedState}
         setSelectedState={setSelectedState}
