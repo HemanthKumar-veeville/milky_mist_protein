@@ -1,0 +1,21 @@
+import { Outlet } from "react-router-dom";
+import { Header } from "./Header";
+import { useState } from "react";
+import { STATES } from "../../lib/constants";
+
+export const Layout = () => {
+  const [selectedState, setSelectedState] = useState<string>("Karnataka");
+
+  return (
+    <div className="min-h-screen">
+      <Header
+        selectedState={selectedState}
+        setSelectedState={setSelectedState}
+        states={STATES}
+      />
+      <main className="pt-[50px] sm:pt-[65px]">
+        <Outlet context={{ selectedState, setSelectedState }} />
+      </main>
+    </div>
+  );
+};

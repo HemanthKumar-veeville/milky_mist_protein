@@ -50,6 +50,8 @@ module.exports = {
       },
       fontFamily: {
         sans: [
+          "Montserrat",
+          "Helvetica-Regular",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -58,6 +60,7 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        montserrat: ["Montserrat", "Helvetica-Regular", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

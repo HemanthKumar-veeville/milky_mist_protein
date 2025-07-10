@@ -1,4 +1,13 @@
 {
-  "nodes": [],
+  "nodes": [
+    {
+      "id": "src/components/ui/Layout.tsx",
+      "label": "Layout",
+      "routes": [
+        "/"
+      ],
+      "isRoot": true
+    }
+  ],
   "edges": []
 }
