@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./button";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   selectedState: string;
@@ -22,11 +23,13 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="fixed top-0 left-0 w-full min-h-[50px] sm:min-h-[65px] max-h-[50px] sm:max-h-[65px] bg-white shadow-md z-50 flex items-center">
       <div className="w-full max-w-screen-xl mx-auto flex flex-row items-center justify-between px-3 sm:px-4 md:px-12">
-        <img
-          className="min-h-[30px] sm:min-h-[40px] max-h-[30px] sm:max-h-[40px] min-w-[109px] sm:min-w-[145px] max-w-[109px] sm:max-w-[145px] object-contain"
-          alt="MilkyMist"
-          src="https://static.wixstatic.com/media/972f01_eec37aaba55849debf25ce804b886daa~mv2.png/v1/crop/x_4,y_0,w_436,h_120/fill/w_145,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MMD.png"
-        />
+        <Link to="/" className="cursor-pointer">
+          <img
+            className="min-h-[30px] sm:min-h-[40px] max-h-[30px] sm:max-h-[40px] min-w-[109px] sm:min-w-[145px] max-w-[109px] sm:max-w-[145px] object-contain"
+            alt="MilkyMist"
+            src="https://static.wixstatic.com/media/972f01_eec37aaba55849debf25ce804b886daa~mv2.png/v1/crop/x_4,y_0,w_436,h_120/fill/w_145,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MMD.png"
+          />
+        </Link>
         <div className="relative">
           <Button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}

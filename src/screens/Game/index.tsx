@@ -31,8 +31,43 @@ const CharacterCard = ({
         alt={`${name} character`}
         src={image}
       />
+      <ProteinCircle
+        text={position === "right" ? "3g" : "12g"}
+        className={`absolute ${
+          position === "right" ? "top-[-18%] right-[20%]" : "top-0 left-[15%]"
+        }`}
+      />
     </div>
   </button>
+);
+
+const ProteinCircle = ({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) => (
+  <div className={`${className} w-[75px] h-[75px]`}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="71"
+      height="71"
+      viewBox="0 0 71 71"
+      fill="none"
+      className="w-full h-full"
+    >
+      <circle cx="35.5" cy="35.5" r="35.5" fill="#10235D" />
+    </svg>
+    <span className="text-white text-center font-[helvetica] text-[19px] font-normal leading-[110%] tracking-[-0.57px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center">
+      <span className="text-white text-center font-[helvetica] text-[19px] font-normal leading-[110%] tracking-[-0.57px]">
+        {text}
+      </span>
+      <span className="text-white text-center font-[helvetica] text-[19px] font-normal leading-[110%] tracking-[-0.57px]">
+        Protein
+      </span>
+    </span>
+  </div>
 );
 
 export const GameIntro = (): JSX.Element => {
@@ -56,7 +91,6 @@ export const GameIntro = (): JSX.Element => {
             src="/img/image-15.png"
           />
         </header>
-
         <div className="flex flex-col items-center">
           <CharacterCard
             name="Disco Dosa"
@@ -80,7 +114,10 @@ export const GameIntro = (): JSX.Element => {
           />
           <Badge
             className={`h-[31px] bg-[#0b254d] rounded-[32px] px-4 py-0 flex items-center justify-center 
-        transition-colors duration-200 group-hover:bg-[#1a3b6d] group-active:bg-[#0b254d]`}
+              transition-colors duration-200 hover:bg-[#1a3b6d] active:bg-[#0b254d] cursor-pointer
+              touch-none tap-highlight-transparent select-none`}
+            onClick={() => navigate("/play")}
+            aria-label="Play Game"
           >
             <span className="text-white text-center font-[helvetica] text-[19px] font-normal leading-[110%] tracking-[-0.57px]">
               Play Game
