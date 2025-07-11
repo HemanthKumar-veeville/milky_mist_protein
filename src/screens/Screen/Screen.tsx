@@ -50,7 +50,8 @@ export const Screen = (): JSX.Element => {
 
   const handleCharacterSelect = (characterName: string) => {
     const urlCharacter = characterName.toLowerCase().replace(/\s+/g, "-");
-    navigate(`/game/${urlCharacter}`);
+    localStorage.setItem("selectedCharacter", urlCharacter);
+    navigate(`/game`);
   };
 
   return (
